@@ -2,22 +2,27 @@
 #define ORACULO_HPP
 
 #include <functional>
+#include <iostream>
+#include <string>
 #include "lista/ListaEnc.hpp"
+
 class Oraculo {
+public:
     struct Evento {
         template <class F>
-        Evento(F run, unsigned int time) :
-            run{run}, time{time} {}
+        Evento(F run, unsigned int time, std::string nome) :
+            run{run}, time{time}, nome{nome} {}
         std::function<void()> run;
         unsigned int time;
-        bool operator>(const Evento &outro) {
+        std::string nome;
+        bool operator>(const Evento &outro) const {
             return time > outro.time;
         }
         bool operator>(int outro) {
             return time > outro;
         }
     };
-public:
+
     Oraculo(unsigned int tempoFinal) :
         tempoFinal{tempoFinal} {}
 
@@ -27,6 +32,8 @@ public:
 
     void run() {
         Evento eventoAtual = eventos.retiraDoInicio();
+        tempoAtual = eventoAtual.time;
+        std::cout << "Tempo: " << tempoAtual << " | " << eventoAtual.nome << "\n" ;
         if (eventoAtual > tempoFinal) exit(42);
         eventoAtual.run();
         run();
