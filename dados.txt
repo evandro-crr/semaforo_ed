@@ -1,0 +1,14 @@
+1973 entraram no sistema pela pista O1Leste
+987 entraram no sistema pela pista N1Sul
+620 entraram no sistema pela pista S1Norte
+987 entraram no sistema pela pista N2Sul
+330 entraram no sistema pela pista S2Norte
+1973 entraram no sistema pela pista L1Oeste
+6870 entraram no total
+508 sairam do sistema pela pista O1Oeste
+578 sairam do sistema pela pista N1Norte
+534 sairam do sistema pela pista S1Sul
+1714 sairam do sistema pela pista N2Norte
+1654 sairam do sistema pela pista S2Sul
+1619 sairam do sistema pela pista L1Leste
+6607 sairam no total

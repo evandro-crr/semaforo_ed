@@ -31,12 +31,15 @@ public:
     }
 
     void run() {
-        Evento eventoAtual = eventos.retiraDoInicio();
-        tempoAtual = eventoAtual.time;
-        //std::cout << "Tempo: " << tempoAtual << " | " << eventoAtual.nome << "\n" ;
-        if (eventoAtual > tempoFinal) exit(42);
-        eventoAtual.run();
-        run();
+        bool continua{true};
+
+        while(continua) {
+            Evento eventoAtual = eventos.retiraDoInicio();
+            tempoAtual = eventoAtual.time;
+            std::cout << "Tempo: " << tempoAtual << " | " << eventoAtual.nome << "\n" ;
+            if (eventoAtual > tempoFinal) continua = false;
+            eventoAtual.run();
+        }
     }
 
     unsigned int getTempo() { return tempoAtual; }

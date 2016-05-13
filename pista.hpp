@@ -43,6 +43,7 @@ public:
         if (tamanhoUsado + novoCarro.tamanho <= tamanho) {
             fila.inclui(novoCarro);
             tamanhoUsado += novoCarro.tamanho;
+            ++entrarao;
             oraculo.add(Oraculo::Evento([&]() {final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Remove carro"));
             return true;
         }
@@ -54,6 +55,7 @@ public:
             carro.direcao = probabilidade();
             fila.inclui(carro);
             tamanhoUsado += carro.tamanho;
+            ++entrarao;
             oraculo.add(Oraculo::Evento([&]() { final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Remove carro"));
             return true;
         }
@@ -61,11 +63,20 @@ public:
     }
 
     void remove() {
-        tamanho -= fila.retira().tamanho;
+        tamanhoUsado -= fila.retira().tamanho;
+        ++sairam;
     }
 
     Carro primeiro() {
         return fila.primeiro();
+    }
+
+    unsigned int quantosSairam() {
+        return sairam;
+    }
+
+    unsigned int quantosEntraram() {
+        return entrarao;
     }
 
     bool lock{false};
@@ -79,6 +90,8 @@ private:
     FilaEnc<Carro> fila;
     unsigned int posicao;
     int pDirecao[3];
+    unsigned int entrarao{0};
+    unsigned int sairam{0};
 };
 
 #endif
