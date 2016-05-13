@@ -41,10 +41,9 @@ public:
         Carro novoCarro = Carro();
         novoCarro.direcao = probabilidade();
         if (tamanhoUsado + novoCarro.tamanho <= tamanho) {
-            std::cout << "entrou\n";
             fila.inclui(novoCarro);
             tamanhoUsado += novoCarro.tamanho;
-            oraculo.add(Oraculo::Evento([&]() { std::cout << "saiu: " << posicao << "\n"; final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Remove carro"));
+            oraculo.add(Oraculo::Evento([&]() {final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Remove carro"));
             return true;
         }
         return false;
@@ -52,11 +51,10 @@ public:
 
     bool add(Carro carro) {
         if (tamanhoUsado + carro.tamanho <= tamanho) {
-            std::cout << "entrou\n";
             carro.direcao = probabilidade();
             fila.inclui(carro);
             tamanhoUsado += carro.tamanho;
-            oraculo.add(Oraculo::Evento([&]() { std::cout << "saiu: " << posicao << "\n"; final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Remove carro"));
+            oraculo.add(Oraculo::Evento([&]() { final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Remove carro"));
             return true;
         }
         return false;

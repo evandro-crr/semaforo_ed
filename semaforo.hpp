@@ -35,9 +35,8 @@ public:
             && out[(posicao + (in[posicao]->primeiro().direcao) + 1) % (int) max]->add(in[posicao]->primeiro()) ) {
             in[posicao]->remove();
         } else {
-            std::cout << "tranca pista: " << pposicao << "\n";
             in[posicao]->lock = true;
-            oraculo.add(Oraculo::Evento([&]() {in[posicao]->lock = false ; passar(pposicao);}, ultimaTroca + frequencia*4, "Libera pista e remove carro"));
+            oraculo.add(Oraculo::Evento([&, posicao, pposicao]() {in[posicao]->lock = false ; passar(pposicao);}, ultimaTroca + frequencia*4, "Libera pista e remove carro"));
         }
     }
 

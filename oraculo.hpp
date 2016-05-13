@@ -33,7 +33,7 @@ public:
     void run() {
         Evento eventoAtual = eventos.retiraDoInicio();
         tempoAtual = eventoAtual.time;
-        std::cout << "Tempo: " << tempoAtual << " | " << eventoAtual.nome << "\n" ;
+        //std::cout << "Tempo: " << tempoAtual << " | " << eventoAtual.nome << "\n" ;
         if (eventoAtual > tempoFinal) exit(42);
         eventoAtual.run();
         run();
