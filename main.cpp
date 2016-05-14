@@ -7,14 +7,19 @@
 int main(int argc, char const *argv[]) {
 
     if (argc != 3) {
-        std::cout << "Duração da simulacao, Frequencia do sinal\n";
+        std::cout << "<Duração da simulacao> <Frequencia do sinal>\n";
+        exit(-1);
+    }
+
+    unsigned int duracao = std::atoi(argv[1]);
+    unsigned int frequencia = std::atoi(argv[2]);
+
+    if (!(duracao*frequencia)) {
+        std::cout << "Entrada invalida\n";
         exit(-1);
     }
 
     std::srand(std::time(NULL));
-
-    unsigned int duracao = std::atoi(argv[1]);
-    unsigned int frequencia = std::atoi(argv[2]);
 
     Oraculo oraculo(duracao);
 
@@ -92,9 +97,9 @@ int main(int argc, char const *argv[]) {
     std::ofstream file;
     file.open("dados.txt");
 
-    file << "Tempo de simulação: " << duracao << "\nFrequancia do sinal: " << frequencia << "\n\n";
+    file << "Tempo de simulação: " << duracao << "s\nFrequancia do sinal: " << frequencia << "s\n\n";
 
-    file << "Entraram no sistema : " << totalEntrada << "\n" <<
+    file << "Entraram no sistema: " << totalEntrada << " Carros\n" <<
             "→ O1Leste : " << o1leste.quantosEntraram() << "\n" <<
             "→ N1Sul   : " << n1sul.quantosEntraram() << "\n" <<
             "→ S1Norte : " << s1norte.quantosEntraram() << "\n" <<
@@ -102,7 +107,7 @@ int main(int argc, char const *argv[]) {
             "→ S2Norte : " << s2norte.quantosEntraram() << "\n" <<
             "→ L1Oeste : " << l1oeste.quantosEntraram() << "\n\n";
 
-    file << "Sairam do sistema: " << totalSairam << "\n" <<
+    file << "Sairam do sistema: " << totalSairam << " Carros\n" <<
             "→ O1Oeste : " << o1oeste.quantosSairam() << "\n" <<
             "→ N1Norte : " << n1norte.quantosSairam() << "\n" <<
             "→ S1Sul   : " << s1sul.quantosSairam() << "\n" <<
@@ -110,7 +115,9 @@ int main(int argc, char const *argv[]) {
             "→ S2Sul   : " << s2sul.quantosSairam() << "\n" <<
             "→ L1Leste : " << l1leste.quantosSairam() << "\n\n";
 
-    file << "Permanecem no sistema: " << totalEntrada - totalSairam << "\n";
+    file << "Permanecem no sistema: " << totalEntrada - totalSairam << " Carros\n" <<
+            "Frequencia de saida: " << ((float) totalSairam / ((float) duracao / 60.f)) << " Carros/min\n";
+
 
     file.close();
 

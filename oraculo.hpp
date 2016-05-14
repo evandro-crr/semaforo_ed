@@ -39,7 +39,6 @@ public:
             unsigned int h = tempoAtual / 3600;
             unsigned int m = (tempoAtual / 60) % 60;
             unsigned int s = tempoAtual % 60;
-
             std::cout << "Tempo: " << (h >= 10 ? "" : "0") << h << ":" << (m >= 10 ? "" : "0") << m << ":" << (s >= 10 ? "" : "0") << s << " | " << eventoAtual.nome << "\n" ;
             eventoAtual.run();
         }
