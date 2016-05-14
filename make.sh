@@ -1,1 +1,1 @@
-g++ -o teste main.cpp -std=c++11 -g
+g++ -o teste main.cpp -std=c++11 -g -O3

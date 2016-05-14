@@ -1,14 +1,20 @@
-1973 entraram no sistema pela pista O1Leste
-987 entraram no sistema pela pista N1Sul
-620 entraram no sistema pela pista S1Norte
-987 entraram no sistema pela pista N2Sul
-330 entraram no sistema pela pista S2Norte
-1973 entraram no sistema pela pista L1Oeste
-6870 entraram no total
-508 sairam do sistema pela pista O1Oeste
-578 sairam do sistema pela pista N1Norte
-534 sairam do sistema pela pista S1Sul
-1714 sairam do sistema pela pista N2Norte
-1654 sairam do sistema pela pista S2Sul
-1619 sairam do sistema pela pista L1Leste
-6607 sairam no total
+Tempo de simulação: 21600
+Frequancia do sinal: 120
+
+Entraram no sistema : 6806
+→ O1Leste : 2164
+→ N1Sul   : 315
+→ S1Norte : 719
+→ N2Sul   : 1087
+→ S2Norte : 358
+→ L1Oeste : 2163
+
+Sairam do sistema: 6624
+→ O1Oeste : 519
+→ N1Norte : 636
+→ S1Sul   : 565
+→ N2Norte : 1628
+→ S2Sul   : 1763
+→ L1Leste : 1513
+
+Permanecem no sistema: 182

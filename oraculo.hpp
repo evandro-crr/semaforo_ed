@@ -31,13 +31,16 @@ public:
     }
 
     void run() {
-        bool continua{true};
 
-        while(continua) {
+        while(true) {
             Evento eventoAtual = eventos.retiraDoInicio();
             tempoAtual = eventoAtual.time;
-            std::cout << "Tempo: " << tempoAtual << " | " << eventoAtual.nome << "\n" ;
-            if (eventoAtual > tempoFinal) continua = false;
+            if (eventoAtual > tempoFinal) break;
+            unsigned int h = tempoAtual / 3600;
+            unsigned int m = (tempoAtual / 60) % 60;
+            unsigned int s = tempoAtual % 60;
+
+            std::cout << "Tempo: " << (h >= 10 ? "" : "0") << h << ":" << (m >= 10 ? "" : "0") << m << ":" << (s >= 10 ? "" : "0") << s << " | " << eventoAtual.nome << "\n" ;
             eventoAtual.run();
         }
     }

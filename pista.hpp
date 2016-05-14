@@ -17,10 +17,10 @@ class Pista {
     };
 
     int probabilidade() {
-        int direcao = std::rand() % 101;
-        if (direcao <= pDirecao[0]) {
+        int direcao = std::rand() % 100;
+        if (direcao < pDirecao[0]) {
             direcao = 0;
-        } else if (direcao <= pDirecao[0]+pDirecao[1]) {
+        } else if (direcao < pDirecao[0]+pDirecao[1]) {
             direcao = 1;
         } else {
             direcao = 2;
@@ -44,7 +44,7 @@ public:
             fila.inclui(novoCarro);
             tamanhoUsado += novoCarro.tamanho;
             ++entrarao;
-            oraculo.add(Oraculo::Evento([&]() {final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Remove carro"));
+            oraculo.add(Oraculo::Evento([&]() {final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Carro chegou no final da pista"));
             return true;
         }
         return false;
@@ -56,7 +56,7 @@ public:
             fila.inclui(carro);
             tamanhoUsado += carro.tamanho;
             ++entrarao;
-            oraculo.add(Oraculo::Evento([&]() { final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Remove carro"));
+            oraculo.add(Oraculo::Evento([&]() { final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Carro chegou no final da pista"));
             return true;
         }
         return false;

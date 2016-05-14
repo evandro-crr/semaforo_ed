@@ -12,7 +12,7 @@ public:
 
     void run(int i) {
         pista.remove();
-        std::cout << saida << std::endl;
+        std::cout << "                | → → → " << saida << "\n";
     }
 
 private:

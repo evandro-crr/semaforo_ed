@@ -36,7 +36,7 @@ public:
             in[posicao]->remove();
         } else {
             in[posicao]->lock = true;
-            oraculo.add(Oraculo::Evento([&, posicao, pposicao]() {in[posicao]->lock = false ; passar(pposicao);}, ultimaTroca + frequencia*4, "Libera pista e remove carro"));
+            oraculo.add(Oraculo::Evento([&, posicao, pposicao]() {in[posicao]->lock = false ; passar(pposicao);}, ultimaTroca + 1 + frequencia, "Tentando mover carro novamente"));
         }
     }
 
