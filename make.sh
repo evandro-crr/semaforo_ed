@@ -1,1 +1,1 @@
-g++ -o teste main.cpp -std=c++11 -g -O3
+g++ -o semsim main.cpp -std=c++11 -g -O3

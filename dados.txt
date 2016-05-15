@@ -1,21 +1,21 @@
 Tempo de simulação: 86400s
-Frequancia do sinal: 60s
+Frequancia do sinal: 120s
 
-Entraram no sistema: 30247 Carros
-→ O1Leste : 8652
-→ N1Sul   : 4325
-→ S1Norte : 2867
-→ N2Sul   : 4333
-→ S2Norte : 1436
-→ L1Oeste : 8634
+Entraram no sistema: 26833 Carros
+→ O1Leste : 8618
+→ N1Sul   : 928
+→ S1Norte : 2884
+→ N2Sul   : 4331
+→ S2Norte : 1447
+→ L1Oeste : 8625
 
-Sairam do sistema: 30174 Carros
-→ O1Oeste : 2531
-→ N1Norte : 2503
-→ S1Sul   : 2609
-→ N2Norte : 7493
-→ S2Sul   : 7687
-→ L1Leste : 7351
+Sairam do sistema: 26640 Carros
+→ O1Oeste : 2053
+→ N1Norte : 2461
+→ S1Sul   : 2208
+→ N2Norte : 6870
+→ S2Sul   : 6830
+→ L1Leste : 6218
 
-Permanecem no sistema: 73 Carros
-Frequencia de saida: 20.9542 Carros/min
+Permanecem no sistema: 193 Carros
+Frequencia de saida: 18.5 Carros/min

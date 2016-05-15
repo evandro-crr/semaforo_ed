@@ -7,7 +7,14 @@
 #include "oraculo.hpp"
 #include "fila/FilaEnc.hpp"
 
+/**
+ * @brief      Pista onde os carros passarão.
+ */
 class Pista {
+
+    /**
+     * @brief      Estrutura que representa um carro.
+     */
     struct Carro {
         Carro() {
             tamanho = 2 + (std::rand() % 5) + 3;
@@ -16,6 +23,11 @@ class Pista {
         int direcao;
     };
 
+    /**
+     * @brief      Calcula a direção para qual o carro deve virar.
+     *
+     * @return     A direção.
+     */
     int probabilidade() {
         int direcao = std::rand() % 100;
         if (direcao < pDirecao[0]) {
@@ -29,14 +41,33 @@ class Pista {
     }
 
 public:
-    Pista(Oraculo &O, unsigned int velocidade, unsigned int tamanho, unsigned int posicao,
-        int pEsquerda = 0, int pFrente = 0, int pDireita = 0) :
-        oraculo{O}, velocidade{velocidade}, tamanho{tamanho}, posicao{posicao} {
+
+    /**
+     * @brief      Construtor
+     *
+     * @param      O           Referencia para o oraculo.
+     * @param[in]  velocidade  Velocidade da pista.
+     * @param[in]  tamanho     Tamanho da pista.
+     * @param[in]  posicao     Possiçao da pista em relacao ao semaforo.
+     * @param[in]  pEsquerda   Proabilidade de virar a esquerda.
+     * @param[in]  pFrente     Proabilidade de siguir em frente.
+     * @param[in]  pDireita    Proabilidade de virar a direita.
+     */
+    Pista(Oraculo &O, unsigned int velocidade, unsigned int tamanho,
+          unsigned int posicao, int pEsquerda = 0,
+          int pFrente = 0, int pDireita = 0) :
+          oraculo{O}, velocidade{velocidade},
+          tamanho{tamanho}, posicao{posicao} {
             pDirecao[0] = pEsquerda;
             pDirecao[1] = pFrente;
             pDirecao[2] = pDireita;
-        }
+    }
 
+    /**
+     * @brief      Tenta adicionar um carro novo na pista.
+     *
+     * @return     Se conseguiu adicionar o carro.
+     */
     bool add() {
         Carro novoCarro = Carro();
         novoCarro.direcao = probabilidade();
@@ -44,37 +75,66 @@ public:
             fila.inclui(novoCarro);
             tamanhoUsado += novoCarro.tamanho;
             ++entrarao;
-            oraculo.add(Oraculo::Evento([&]() {final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Carro chegou no final da pista"));
+            oraculo.add(Oraculo::Evento([&]() {final(posicao);},
+                        oraculo.getTempo() + (tamanho / 10 * 36 / velocidade),
+                        "Carro chegou no final da pista"));
             return true;
         }
         return false;
     }
 
+    /**
+     * @brief      Tenta adicionar um carro na pista.
+     *
+     * @param[in]  carro  Carro que sera adicioado.
+     *
+     * @return     Se conseguiu adicionar o carro.
+     */
     bool add(Carro carro) {
         if (tamanhoUsado + carro.tamanho <= tamanho) {
             carro.direcao = probabilidade();
             fila.inclui(carro);
             tamanhoUsado += carro.tamanho;
             ++entrarao;
-            oraculo.add(Oraculo::Evento([&]() { final(posicao);}, oraculo.getTempo() + (tamanho / 10 * 36 / velocidade), "Carro chegou no final da pista"));
+            oraculo.add(Oraculo::Evento([&]() { final(posicao);},
+                        oraculo.getTempo() + (tamanho / 10 * 36 / velocidade),
+                        "Carro chegou no final da pista"));
             return true;
         }
         return false;
     }
 
+    /**
+     * @brief      Remove um carro da pista.
+     */
     void remove() {
         tamanhoUsado -= fila.retira().tamanho;
         ++sairam;
     }
 
+    /**
+     * @brief      Carro mais a frente na pista.
+     *
+     * @return     O carro.
+     */
     Carro primeiro() {
         return fila.primeiro();
     }
 
+    /**
+     * @brief      Quanto carros sairam dessa pista.
+     *
+     * @return     A quantidade.
+     */
     unsigned int quantosSairam() {
         return sairam;
     }
 
+    /**
+     * @brief      Quantos carros entraram nessa pista.
+     *
+     * @return     A quantidade.
+     */
     unsigned int quantosEntraram() {
         return entrarao;
     }
