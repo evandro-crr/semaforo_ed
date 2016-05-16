@@ -1,3 +1,5 @@
+// Copyright [2016] <Evandro Chagas>
+// Copyright [2016] <Lucas Sousa>
 #include <fstream>
 #include <ctime>
 #include "semaforo.hpp"

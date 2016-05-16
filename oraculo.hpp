@@ -1,3 +1,5 @@
+// Copyright [2016] <Evandro Chagas>
+// Copyright [2016] <Lucas Sousa>
 #ifndef ORACULO_HPP
 #define ORACULO_HPP
 

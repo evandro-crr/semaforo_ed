@@ -1,3 +1,5 @@
+// Copyright [2016] <Evandro Chagas>
+// Copyright [2016] <Lucas Sousa>
 #ifndef SEMAFORO_HPP
 #define SEMAFORO_HPP
 
@@ -79,7 +81,7 @@ private:
     Oraculo &oraculo;
     unsigned int frequencia;
     unsigned int ultimaTroca{0};
-    enum Aberto { oeste, norte, leste, sul, max } aberto;
+    enum Aberto { oeste, norte, leste, sul, max } aberto{oeste};
 
 };
 
