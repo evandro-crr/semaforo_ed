@@ -21,11 +21,11 @@ public:
         pista{pista}, saida{saida} {}
 
     /**
-     * @brief      Consome um carro.
+     * @brief      Consome um carro da pista.
      *
      * @param[in]  i     Nada não.
      */
-    void run(int i) {
+    void consome(int i) {
         pista.remove();
         std::cout << "                | → → → " << saida << "\n";
     }

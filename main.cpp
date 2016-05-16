@@ -27,14 +27,14 @@ int main(int argc, char const *argv[]) {
 
     Pista o1oeste(oraculo, 80, 2000, 0);
     Limbo lo1oeste(o1oeste,"Carro saiu da pista O1Oeste");
-    o1oeste.final = [&](int i) { lo1oeste.run(i); };
+    o1oeste.final = [&](int i) { lo1oeste.consome(i); };
     Pista o1leste(oraculo, 80, 2000, 0, 10, 80, 10);
     CriancasChinesa po1leste(oraculo, o1leste, 10, 2,
                              "Carro entrou na pista O1Leste");
 
     Pista n1norte(oraculo, 60, 500, 1);
     Limbo ln1norte(n1norte, "Carro saiu da pista N1Norte");
-    n1norte.final = [&](int i) { ln1norte.run(i); };
+    n1norte.final = [&](int i) { ln1norte.consome(i); };
     Pista n1sul(oraculo, 60, 500, 1, 80, 10, 10);
     CriancasChinesa pn1sul(oraculo, n1sul, 20, 5,
                            "Carro entrou na pista N1Sul");
@@ -44,7 +44,7 @@ int main(int argc, char const *argv[]) {
 
     Pista s1sul(oraculo, 60, 500, 3);
     Limbo ls1sul(s1sul, "Carro saiu da pista S1Sul");
-    s1sul.final = [&](int i) { ls1sul.run(i); };
+    s1sul.final = [&](int i) { ls1sul.consome(i); };
     Pista s1norte(oraculo, 60, 500, 3, 10, 10, 80);
     CriancasChinesa ps1norte(oraculo, s1norte, 30, 7,
                              "Carro entrou na pista S1Norte");
@@ -53,21 +53,21 @@ int main(int argc, char const *argv[]) {
 
     Pista n2norte(oraculo, 40, 500, 3);
     Limbo ln2norte(n2norte, "Carro saiu da pista N2Norte");
-    n2norte.final = [&](int i) { ln2norte.run(i); };
+    n2norte.final = [&](int i) { ln2norte.consome(i); };
     Pista n2sul(oraculo, 40, 500, 3, 40, 30, 30);
     CriancasChinesa pn2sul(oraculo, n2sul, 20, 5,
                            "Carro entrou na pista N2sul");
 
     Pista l1leste(oraculo, 30, 400, 4);
     Limbo ll1leste(l1leste, "Carro saiu da pista L1Leste");
-    l1leste.final = [&](int i) { ll1leste.run(i); };
+    l1leste.final = [&](int i) { ll1leste.consome(i); };
     Pista l1oeste(oraculo, 30, 400, 4, 30, 30, 40);
     CriancasChinesa pl1leste(oraculo, l1oeste, 10, 2,
                              "Carro entrou na pista L1Leste");
 
     Pista s2sul(oraculo, 40, 500, 5);
     Limbo ls2sul(s2sul, "Carro saiu da pista S2Sul");
-    s2sul.final = [&](int i) { ls2sul.run(i); };
+    s2sul.final = [&](int i) { ls2sul.consome(i); };
     Pista s2norte(oraculo, 40, 500, 5, 30, 30, 40);
     CriancasChinesa ps2norte(oraculo, s2norte, 60, 15,
                              "Carro entrou na pista S2Norte");

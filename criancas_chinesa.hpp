@@ -28,19 +28,19 @@ public:
                     variacao{variacao}, saida{saida} {
                         unsigned int tempo = frequencia - variacao +
                                              (std::rand() % ((variacao*2)+1));
-                        oraculo.add(Oraculo::Evento([&]() {add();}, tempo,
+                        oraculo.add(Oraculo::Evento([&]() {produz();}, tempo,
                                     "Produz primeiros carros"));
     }
 
     /**
      * @brief      Produz um carro novo.
      */
-    void add() {
+    void produz() {
         if (pista.add())
             std::cout << "                | → → → " << saida << "\n";
         unsigned int tempo = frequencia - variacao +
                              (std::rand() % ((variacao*2)+1));
-        oraculo.add(Oraculo::Evento([&]() {add();}, oraculo.getTempo() + tempo,
+        oraculo.add(Oraculo::Evento([&]() {produz();}, oraculo.getTempo() + tempo,
                     "Produz novo carro"));
     }
 
