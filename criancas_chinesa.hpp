@@ -11,6 +11,8 @@
 
 /**
  * @brief      Produz os carros.
+ *
+ *             Classe que adiciona carros ao sistema pelas pistas produtoras.
  */
 class CriancasChinesa {
 public:
@@ -18,8 +20,8 @@ public:
     /**
      * @brief      Construtor
      *
-     * @param      O           Referencia para o oraculo.
-     * @param      P           Referencia para a pista.
+     * @param[in]  O           Referencia para o oraculo.
+     * @param[in]  P           Referencia para a pista.
      * @param[in]  frequencia  Frequenia em que os carros são produzidos.
      * @param[in]  variacao    Variação no tempo da produção.
      * @param[in]  saida       Texto de saida no terminal.
@@ -36,10 +38,14 @@ public:
 
     /**
      * @brief      Produz um carro novo.
+     *
+     *             Tenta adicionar um novo carro, e cria um evento baseado na
+     *          frequencia e varia��o da pista, ao fim agenda um novo
+     *          evento de produ��o.
      */
     void produz() {
         if (pista.add())
-            std::cout << "                | → → → " << saida << "\n";
+            std::cout << "                | " << saida << "\n";
         unsigned int tempo = frequencia - variacao +
                              (std::rand() % ((variacao*2)+1));
         oraculo.add(Oraculo::Evento([&]() {produz();}, oraculo.getTempo() + tempo,
