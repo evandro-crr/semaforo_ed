@@ -13,7 +13,7 @@ class Semaforo {
 public:
 
     /**
-     * @brief      Construtor.
+     * @brief      Construtor. Adiciona o primeiro evento de troca de sinal.
      *
      * @param[in]  pSemaforo   Posição do semaforo.
      * @param      in0         Entrada oeste.
@@ -44,7 +44,7 @@ public:
     }
 
     /**
-     * @brief      Troca o sinal.
+     * @brief      Troca o sinal e adiciona o evento da proxima troca de sinal.
      */
     void troca() {
         aberto = (Aberto) (((int) aberto + 1) % (int) max);
@@ -56,11 +56,20 @@ public:
     /**
      * @brief      Passa carro pelo semaforo.
      *
+     *             Tenta passar o carro pela sinal, removendo de uma pista e
+     *             adicionado na outra, caso não consiga, tranca a pista e
+     *             adiciona um novo evento na proxima troca de sinal para
+     *             liberar a pista e tentar passar novamente pelo sinal.
+     *
      * @param[in]  pposicao  Pista de onde o carro vem.
      */
     void passar(int pposicao) {
         int posicao = pposicao;
+        // Trata a entrada casso seja o semaforo 2.
         if (pSemaforo == 2) posicao -= 2;
+        // Se o semaforo estiver aberto nessa pista, a rua não estiver trancada
+        // e conseguiu passar o carro para seu destino, retira o carro da pista
+        // de onde ele vem.
         if ((posicao == (int) aberto) && !(in[posicao]->lock) &&
             out[(posicao + (in[posicao]->primeiro().direcao) + 1) % (int) max]->
                 add(in[posicao]->primeiro())) {

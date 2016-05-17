@@ -19,6 +19,16 @@ public:
      */
     struct Evento {
         template <class F>
+
+        /**
+         * @brief      Construtor.
+         *
+         * @param[in]  run   Metodo que sera executado quando o evento for
+         *                   chamado.
+         * @param[in]  time  Tempo em que esse evento ocorrera.
+         * @param[in]  nome  String que sera mostrada quando o eventor for
+         *                   executado
+         */
         Evento(F run, unsigned int time, std::string nome) :
             run{run}, time{time}, nome{nome} {}
         std::function<void()> run;
@@ -50,7 +60,7 @@ public:
     }
 
     /**
-     * @brief      Executa os evento dentro do tempo se simulação
+     * @brief      Executa os evento dentro do tempo de simulação
      */
     void run() {
         while(true) {
@@ -71,7 +81,7 @@ public:
     /**
      * @brief      Tempo do ultimo evento executado.
      *
-     * @return     O tempo.
+     * @return     O tempo atual.
      */
     unsigned int getTempo() { return tempoAtual; }
 

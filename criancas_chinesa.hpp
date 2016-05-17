@@ -18,12 +18,12 @@ class CriancasChinesa {
 public:
 
     /**
-     * @brief      Construtor
+     * @brief      Construtor. Adiciona o primeiro evento de produçao de carro.
      *
      * @param[in]  O           Referencia para o oraculo.
      * @param[in]  P           Referencia para a pista.
-     * @param[in]  frequencia  Frequenia em que os carros sÃ£o produzidos.
-     * @param[in]  variacao    VariaÃ§Ã£o no tempo da produÃ§Ã£o.
+     * @param[in]  frequencia  Frequenia em que os carros são produzidos.
+     * @param[in]  variacao    Varião no tempo da produção.
      * @param[in]  saida       Texto de saida no terminal.
      */
     CriancasChinesa(Oraculo &O, Pista &P, unsigned int frequencia,
@@ -39,17 +39,17 @@ public:
     /**
      * @brief      Produz um carro novo.
      *
-     *             Tenta adicionar um novo carro, e cria um evento baseado na
-     *          frequencia e variação da pista, ao fim agenda um novo
-     *          evento de produção.
+     *             Tenta adicionar um novo carro na pista, se conseguiu escrever
+     *             a string saida, e agenda um evento com o metodo produz()
+     *             baseado na frequencia e variação da pista.
      */
     void produz() {
         if (pista.add())
             std::cout << "                | " << saida << "\n";
         unsigned int tempo = frequencia - variacao +
                              (std::rand() % ((variacao*2)+1));
-        oraculo.add(Oraculo::Evento([&]() {produz();}, oraculo.getTempo() + tempo,
-                    "Produz novo carro"));
+        oraculo.add(Oraculo::Evento([&]() {produz();},
+                    oraculo.getTempo() + tempo, "Produz novo carro"));
     }
 
 private:

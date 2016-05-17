@@ -9,8 +9,9 @@
 
 /**
  * @brief      Para onde os carros vão quando saem da simulação.
- *             Classe que elimina carros do sistema quando estes chegam ao
- *          final de pistas sumidouras.
+ *
+ *              Classe que elimina carros do sistema quando estes chegam ao
+ *             final de pistas sumidouras.
  */
 class Limbo {
 public:
@@ -26,12 +27,10 @@ public:
 
     /**
      * @brief      Consome um carro da pista.
-     *
-     * @param[in]  i     Nada não.
      */
-    void consome(int i) {
+    void consome() {
         pista.remove();
-        std::cout << "                | → → → " << saida << "\n";
+        std::cout << "                | " << saida << "\n";
     }
 
 private:

@@ -10,7 +10,7 @@
 #include "fila/FilaEnc.hpp"
 
 /**
- * @brief      Pista onde os carros passarão.
+ * @brief      Pista por onde os carros passarão.
  */
 class Pista {
 
@@ -26,7 +26,8 @@ class Pista {
     };
 
     /**
-     * @brief      Calcula a direção para qual o carro deve virar.
+     * @brief      Calcula a direção para qual o carro deve virar de acordo com
+     *             as probabilidades da pista.
      *
      * @return     A direção.
      */
@@ -50,7 +51,7 @@ public:
      * @param      O           Referencia para o oraculo.
      * @param[in]  velocidade  Velocidade da pista.
      * @param[in]  tamanho     Tamanho da pista.
-     * @param[in]  posicao     Possiçao da pista em relacao ao semaforo.
+     * @param[in]  posicao     Possição da pista em relacao ao semaforo.
      * @param[in]  pEsquerda   Proabilidade de virar a esquerda.
      * @param[in]  pFrente     Proabilidade de siguir em frente.
      * @param[in]  pDireita    Proabilidade de virar a direita.
@@ -67,6 +68,10 @@ public:
 
     /**
      * @brief      Tenta adicionar um carro novo na pista.
+     *
+     *             Se houver espço suficiente na pista, adiciona o carro e
+     *             agenda um evento de quando ele chegou no final da pista, esse
+     *             evento chama a function final.
      *
      * @return     Se conseguiu adicionar o carro.
      */
@@ -86,7 +91,7 @@ public:
     }
 
     /**
-     * @brief      Tenta adicionar um carro na pista.
+     * @brief      Idem ao add porrem recebe o carro que deve ser adicionado.
      *
      * @param[in]  carro  Carro que sera adicioado.
      *
@@ -141,8 +146,9 @@ public:
         return entrarao;
     }
 
-    bool lock{false};
-    std::function<void(int)> final;
+    bool lock{false}; //! Se o primeiro carro da pista esta trancando ele.
+    std::function<void(int)> final; //! Funçao que sera chamada quando o carro chegar ao final da pista,
+                                    //! pode ser tanto o semaforo ou limbo.
 
 private:
     Oraculo &oraculo;
@@ -150,7 +156,9 @@ private:
     unsigned int tamanho;
     unsigned int tamanhoUsado{0};
     FilaEnc<Carro> fila;
-    unsigned int posicao;
+    unsigned int posicao; // Posiçao relativa ao semaforo 1, onde Oeste = 0, Norte = 1, Leste
+                          // = 2, Sul = 3, no semaforo 2 os mesmos valores são utilizado
+                          // acresentado 2.
     int pDirecao[3];
     unsigned int entrarao{0};
     unsigned int sairam{0};
