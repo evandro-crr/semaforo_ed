@@ -9,6 +9,8 @@
 
 /**
  * @brief      Para onde os carros vão quando saem da simulação.
+ *             Classe que elimina carros do sistema quando estes chegam ao
+ *          final de pistas sumidouras.
  */
 class Limbo {
 public:
