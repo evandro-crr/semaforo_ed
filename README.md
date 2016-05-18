@@ -52,6 +52,7 @@ A simulação ira gerar um arquivo ```dado.txt``` com as imagens dos tempos defi
 da simulação, além de dados gerais do sistema.
 Exemplo.
 ```
+...
 Imagem do sistema no tempo: 3300
 Pista Fonstes
    O1Leste
@@ -188,3 +189,5 @@ Sairam do sistema: 1175
 Permanecem no sistema: 83
 Frequencia de saida: 19.5833 Carros/min
 ```
+## Observação
+No codigo foi usado funções Lambda e function da biblioteca functional do C++ 11
