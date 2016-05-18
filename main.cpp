@@ -44,7 +44,7 @@ std::ofstream file;
  */
 void snapshot() {
     file << "Imagem do sistema no tempo: " << oraculo.getTempo() << "\n"
-            "Pista Fonstes\n" <<
+            "Pistas Fonte\n" <<
             "   O1Leste\n" <<
             "       Entraram: " << o1leste.quantosEntraram() << "\n" <<
             "       Sairam: " << o1leste.quantosSairam() << "\n" <<
