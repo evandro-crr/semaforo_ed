@@ -52,141 +52,77 @@ da simulação, além de dados gerais do sistema.
 Exemplo:
 ```
 ...
-Imagem do sistema no tempo: 3300
-Pista Fonstes
+Imagem do sistema no tempo: 18000
+Pistas Fonte
    O1Leste
-       Entraram: 331
-       Sairam: 310
-       Dentro: 21
+       Entraram: 1800
+       Sairam: 1786
+       Dentro: 14
    N1Sul
-       Entraram: 166
-       Sairam: 161
-       Dentro: 5
-   S1Norte
-       Entraram: 107
-       Sairam: 101
-       Dentro: 6
-   N2Sul
-       Entraram: 168
-       Sairam: 163
-       Dentro: 5
-   S2Norte
-       Entraram: 54
-       Sairam: 51
+       Entraram: 896
+       Sairam: 893
        Dentro: 3
-   L1Oeste
-       Entraram: 323
-       Sairam: 319
+   S1Norte
+       Entraram: 600
+       Sairam: 599
+       Dentro: 1
+   N2Sul
+       Entraram: 903
+       Sairam: 899
        Dentro: 4
-
-Pistas Sumidouro
-   O1Oeste
-       Sairam: 102
-       Entraram: 107
-       Dentro: 5
-   N1Norte
-       Sairam: 96
-       Entraram: 96
-       Dentro: 0
-   S1Sul
-       Sairam: 95
-       Entraram: 95
-       Dentro: 0
-   N2Norte
-       Sairam: 263
-       Entraram: 266
-       Dentro: 3
-   S2Sul
-       Sairam: 270
-       Entraram: 272
-       Dentro: 2
-   L1Leste
-       Sairam: 257
-       Entraram: 257
-       Dentro: 0
-
-Pistas Centrais
-   C1Oeste
-       Entraram: 171
-       Sairam: 171
-       Dentro: 0
-   C1Leste
-       Entraram: 445
-       Sairam: 433
-       Dentro: 12
-
-------------------------------
-Imagem do sistema no tempo: 3600
-Pista Fonstes
-   O1Leste
-       Entraram: 362
-       Sairam: 334
-       Dentro: 28
-   N1Sul
-       Entraram: 181
-       Sairam: 174
-       Dentro: 7
-   S1Norte
-       Entraram: 117
-       Sairam: 116
-       Dentro: 1
-   N2Sul
-       Entraram: 184
-       Sairam: 175
-       Dentro: 9
    S2Norte
-       Entraram: 60
-       Sairam: 59
+       Entraram: 295
+       Sairam: 294
        Dentro: 1
    L1Oeste
-       Entraram: 354
-       Sairam: 343
-       Dentro: 11
+       Entraram: 1803
+       Sairam: 1795
+       Dentro: 8
 
 Pistas Sumidouro
    O1Oeste
-       Sairam: 109
-       Entraram: 109
-       Dentro: 0
+       Sairam: 482
+       Entraram: 486
+       Dentro: 4
    N1Norte
-       Sairam: 106
-       Entraram: 106
-       Dentro: 0
+       Sairam: 502
+       Entraram: 504
+       Dentro: 2
    S1Sul
-       Sairam: 98
-       Entraram: 98
+       Sairam: 530
+       Entraram: 530
        Dentro: 0
    N2Norte
-       Sairam: 278
-       Entraram: 279
+       Sairam: 1592
+       Entraram: 1593
        Dentro: 1
    S2Sul
-       Sairam: 300
-       Entraram: 300
-       Dentro: 0
+       Sairam: 1602
+       Entraram: 1605
+       Dentro: 3
    L1Leste
-       Sairam: 284
-       Entraram: 284
-       Dentro: 0
+       Sairam: 1535
+       Entraram: 1538
+       Dentro: 3
 
 Pistas Centrais
    C1Oeste
-       Entraram: 183
-       Sairam: 181
+       Entraram: 866
+       Sairam: 864
        Dentro: 2
    C1Leste
-       Entraram: 492
-       Sairam: 469
-       Dentro: 23
+       Entraram: 2622
+       Sairam: 2614
+       Dentro: 8
 
 ------------------------------
-Tempo de simulação: 3600s
-Frequancia do sinal: 60s
+Tempo de simulação: 18000s
+Frequancia do sinal: 12s
 
-Entraram no sistema: 1258
-Sairam do sistema: 1175
-Permanecem no sistema: 83
-Frequencia de saida: 19.5833 Carros/min
+Entraram no sistema: 6297
+Sairam do sistema: 6243
+Permanecem no sistema: 54
+Frequencia de saida: 20.81 Carros/min
 ```
 ## Observação
 No codigo foi usado funções Lambda e function da biblioteca functional do C++ 11
