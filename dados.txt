@@ -1,392 +1,264 @@
-Imagem do sistema no tempo: 60
-Pista Fonstes
+Imagem do sistema no tempo: 5000
+Pistas Fonte
    O1Leste
-       Entraram: 5
-       Sairam: 0
-       Dentro: 5
-   N1Sul
-       Entraram: 2
-       Sairam: 0
-       Dentro: 2
-   S1Norte
-       Entraram: 2
-       Sairam: 0
-       Dentro: 2
-   N2Sul
-       Entraram: 3
-       Sairam: 0
-       Dentro: 3
-   S2Norte
-       Entraram: 1
-       Sairam: 0
-       Dentro: 1
-   L1Oeste
-       Entraram: 6
-       Sairam: 0
-       Dentro: 6
-
-Pistas Sumidouro
-   O1Oeste
-       Sairam: 0
-       Entraram: 0
-       Dentro: 0
-   N1Norte
-       Sairam: 0
-       Entraram: 0
-       Dentro: 0
-   S1Sul
-       Sairam: 0
-       Entraram: 0
-       Dentro: 0
-   N2Norte
-       Sairam: 0
-       Entraram: 0
-       Dentro: 0
-   S2Sul
-       Sairam: 0
-       Entraram: 0
-       Dentro: 0
-   L1Leste
-       Sairam: 0
-       Entraram: 0
-       Dentro: 0
-
-Pistas Centrais
-   C1Oeste
-       Entraram: 0
-       Sairam: 0
-       Dentro: 0
-   C1Leste
-       Entraram: 0
-       Sairam: 0
-       Dentro: 0
-
-------------------------------
-Imagem do sistema no tempo: 200
-Pista Fonstes
-   O1Leste
-       Entraram: 19
-       Sairam: 0
-       Dentro: 19
-   N1Sul
-       Entraram: 9
-       Sairam: 4
-       Dentro: 5
-   S1Norte
-       Entraram: 6
-       Sairam: 5
-       Dentro: 1
-   N2Sul
-       Entraram: 10
-       Sairam: 3
-       Dentro: 7
-   S2Norte
-       Entraram: 3
-       Sairam: 2
-       Dentro: 1
-   L1Oeste
-       Entraram: 19
-       Sairam: 12
-       Dentro: 7
-
-Pistas Sumidouro
-   O1Oeste
-       Sairam: 1
-       Entraram: 1
-       Dentro: 0
-   N1Norte
-       Sairam: 1
-       Entraram: 1
-       Dentro: 0
-   S1Sul
-       Sairam: 1
-       Entraram: 1
-       Dentro: 0
-   N2Norte
-       Sairam: 6
-       Entraram: 6
-       Dentro: 0
-   S2Sul
-       Sairam: 2
-       Entraram: 4
-       Dentro: 2
-   L1Leste
-       Sairam: 3
-       Entraram: 5
-       Dentro: 2
-
-Pistas Centrais
-   C1Oeste
-       Entraram: 2
-       Sairam: 2
-       Dentro: 0
-   C1Leste
-       Entraram: 8
-       Sairam: 0
+       Entraram: 496
+       Sairam: 488
        Dentro: 8
-
-------------------------------
-Imagem do sistema no tempo: 1800
-Pista Fonstes
-   O1Leste
-       Entraram: 182
-       Sairam: 167
-       Dentro: 15
    N1Sul
-       Entraram: 89
-       Sairam: 88
-       Dentro: 1
+       Entraram: 247
+       Sairam: 244
+       Dentro: 3
    S1Norte
-       Entraram: 58
-       Sairam: 53
-       Dentro: 5
-   N2Sul
-       Entraram: 92
-       Sairam: 89
-       Dentro: 3
-   S2Norte
-       Entraram: 30
-       Sairam: 27
-       Dentro: 3
-   L1Oeste
-       Entraram: 178
-       Sairam: 156
-       Dentro: 22
-
-Pistas Sumidouro
-   O1Oeste
-       Sairam: 50
-       Entraram: 53
-       Dentro: 3
-   N1Norte
-       Sairam: 47
-       Entraram: 47
-       Dentro: 0
-   S1Sul
-       Sairam: 54
-       Entraram: 54
-       Dentro: 0
-   N2Norte
-       Sairam: 132
-       Entraram: 132
-       Dentro: 0
-   S2Sul
-       Sairam: 147
-       Entraram: 148
-       Dentro: 1
-   L1Leste
-       Sairam: 133
-       Entraram: 133
-       Dentro: 0
-
-Pistas Centrais
-   C1Oeste
-       Entraram: 91
-       Sairam: 88
-       Dentro: 3
-   C1Leste
-       Entraram: 242
-       Sairam: 232
-       Dentro: 10
-
-------------------------------
-Imagem do sistema no tempo: 2400
-Pista Fonstes
-   O1Leste
-       Entraram: 243
-       Sairam: 215
-       Dentro: 28
-   N1Sul
-       Entraram: 119
-       Sairam: 111
-       Dentro: 8
-   S1Norte
-       Entraram: 79
-       Sairam: 77
-       Dentro: 2
-   N2Sul
-       Entraram: 121
-       Sairam: 114
-       Dentro: 7
-   S2Norte
-       Entraram: 40
-       Sairam: 39
-       Dentro: 1
-   L1Oeste
-       Entraram: 237
-       Sairam: 226
-       Dentro: 11
-
-Pistas Sumidouro
-   O1Oeste
-       Sairam: 70
-       Entraram: 71
-       Dentro: 1
-   N1Norte
-       Sairam: 64
-       Entraram: 64
-       Dentro: 0
-   S1Sul
-       Sairam: 71
-       Entraram: 71
-       Dentro: 0
-   N2Norte
-       Sairam: 185
-       Entraram: 185
-       Dentro: 0
-   S2Sul
-       Sairam: 191
-       Entraram: 191
-       Dentro: 0
-   L1Leste
-       Sairam: 180
-       Entraram: 181
-       Dentro: 1
-
-Pistas Centrais
-   C1Oeste
-       Entraram: 120
-       Sairam: 119
-       Dentro: 1
-   C1Leste
-       Entraram: 316
-       Sairam: 298
-       Dentro: 18
-
-------------------------------
-Imagem do sistema no tempo: 3300
-Pista Fonstes
-   O1Leste
-       Entraram: 331
-       Sairam: 310
-       Dentro: 21
-   N1Sul
        Entraram: 166
-       Sairam: 161
-       Dentro: 5
-   S1Norte
-       Entraram: 107
-       Sairam: 101
-       Dentro: 6
+       Sairam: 165
+       Dentro: 1
    N2Sul
-       Entraram: 168
-       Sairam: 163
-       Dentro: 5
-   S2Norte
-       Entraram: 54
-       Sairam: 51
+       Entraram: 251
+       Sairam: 248
        Dentro: 3
+   S2Norte
+       Entraram: 79
+       Sairam: 79
+       Dentro: 0
    L1Oeste
-       Entraram: 323
-       Sairam: 319
+       Entraram: 500
+       Sairam: 493
+       Dentro: 7
+
+Pistas Sumidouro
+   O1Oeste
+       Sairam: 116
+       Entraram: 122
+       Dentro: 6
+   N1Norte
+       Sairam: 149
+       Entraram: 149
+       Dentro: 0
+   S1Sul
+       Sairam: 136
+       Entraram: 136
+       Dentro: 0
+   N2Norte
+       Sairam: 428
+       Entraram: 432
+       Dentro: 4
+   S2Sul
+       Sairam: 443
+       Entraram: 447
+       Dentro: 4
+   L1Leste
+       Sairam: 420
+       Entraram: 425
+       Dentro: 5
+
+Pistas Centrais
+   C1Oeste
+       Entraram: 232
+       Sairam: 230
+       Dentro: 2
+   C1Leste
+       Entraram: 720
+       Sairam: 716
        Dentro: 4
 
-Pistas Sumidouro
-   O1Oeste
-       Sairam: 102
-       Entraram: 107
-       Dentro: 5
-   N1Norte
-       Sairam: 96
-       Entraram: 96
-       Dentro: 0
-   S1Sul
-       Sairam: 95
-       Entraram: 95
-       Dentro: 0
-   N2Norte
-       Sairam: 263
-       Entraram: 266
-       Dentro: 3
-   S2Sul
-       Sairam: 270
-       Entraram: 272
-       Dentro: 2
-   L1Leste
-       Sairam: 257
-       Entraram: 257
-       Dentro: 0
-
-Pistas Centrais
-   C1Oeste
-       Entraram: 171
-       Sairam: 171
-       Dentro: 0
-   C1Leste
-       Entraram: 445
-       Sairam: 433
-       Dentro: 12
-
 ------------------------------
-Imagem do sistema no tempo: 3600
-Pista Fonstes
+Imagem do sistema no tempo: 10000
+Pistas Fonte
    O1Leste
-       Entraram: 362
-       Sairam: 334
-       Dentro: 28
+       Entraram: 994
+       Sairam: 984
+       Dentro: 10
    N1Sul
-       Entraram: 181
-       Sairam: 174
-       Dentro: 7
+       Entraram: 491
+       Sairam: 490
+       Dentro: 1
    S1Norte
-       Entraram: 117
-       Sairam: 116
+       Entraram: 332
+       Sairam: 331
        Dentro: 1
    N2Sul
-       Entraram: 184
-       Sairam: 175
-       Dentro: 9
+       Entraram: 500
+       Sairam: 498
+       Dentro: 2
    S2Norte
-       Entraram: 60
-       Sairam: 59
+       Entraram: 161
+       Sairam: 160
        Dentro: 1
    L1Oeste
-       Entraram: 354
-       Sairam: 343
-       Dentro: 11
+       Entraram: 1004
+       Sairam: 996
+       Dentro: 8
 
 Pistas Sumidouro
    O1Oeste
-       Sairam: 109
-       Entraram: 109
-       Dentro: 0
+       Sairam: 254
+       Entraram: 258
+       Dentro: 4
    N1Norte
-       Sairam: 106
-       Entraram: 106
+       Sairam: 268
+       Entraram: 268
        Dentro: 0
    S1Sul
-       Sairam: 98
-       Entraram: 98
-       Dentro: 0
+       Sairam: 282
+       Entraram: 282
+       Dentro: 2
    N2Norte
-       Sairam: 278
-       Entraram: 279
-       Dentro: 1
+       Sairam: 875
+       Entraram: 880
+       Dentro: 5
    S2Sul
-       Sairam: 300
-       Entraram: 300
-       Dentro: 0
+       Sairam: 899
+       Entraram: 901
+       Dentro: 2
    L1Leste
-       Sairam: 284
-       Entraram: 284
-       Dentro: 0
+       Sairam: 853
+       Entraram: 859
+       Dentro: 6
 
 Pistas Centrais
    C1Oeste
-       Entraram: 183
-       Sairam: 181
-       Dentro: 2
+       Entraram: 471
+       Sairam: 466
+       Dentro: 5
    C1Leste
-       Entraram: 492
-       Sairam: 469
-       Dentro: 23
+       Entraram: 1461
+       Sairam: 1457
+       Dentro: 4
 
 ------------------------------
-Tempo de simulação: 3600s
-Frequancia do sinal: 60s
+Imagem do sistema no tempo: 15000
+Pistas Fonte
+   O1Leste
+       Entraram: 1498
+       Sairam: 1489
+       Dentro: 9
+   N1Sul
+       Entraram: 747
+       Sairam: 745
+       Dentro: 2
+   S1Norte
+       Entraram: 499
+       Sairam: 498
+       Dentro: 1
+   N2Sul
+       Entraram: 753
+       Sairam: 751
+       Dentro: 2
+   S2Norte
+       Entraram: 244
+       Sairam: 243
+       Dentro: 1
+   L1Oeste
+       Entraram: 1499
+       Sairam: 1491
+       Dentro: 8
 
-Entraram no sistema: 1258
-Sairam do sistema: 1175
-Permanecem no sistema: 83
-Frequencia de saida: 19.5833 Carros/min
+Pistas Sumidouro
+   O1Oeste
+       Sairam: 399
+       Entraram: 400
+       Dentro: 1
+   N1Norte
+       Sairam: 417
+       Entraram: 417
+       Dentro: 0
+   S1Sul
+       Sairam: 432
+       Entraram: 432
+       Dentro: 1
+   N2Norte
+       Sairam: 1329
+       Entraram: 1332
+       Dentro: 3
+   S2Sul
+       Sairam: 1336
+       Entraram: 1341
+       Dentro: 5
+   L1Leste
+       Sairam: 1284
+       Entraram: 1286
+       Dentro: 2
+
+Pistas Centrais
+   C1Oeste
+       Entraram: 717
+       Sairam: 714
+       Dentro: 3
+   C1Leste
+       Entraram: 2196
+       Sairam: 2191
+       Dentro: 5
+
+------------------------------
+Imagem do sistema no tempo: 18000
+Pistas Fonte
+   O1Leste
+       Entraram: 1800
+       Sairam: 1786
+       Dentro: 14
+   N1Sul
+       Entraram: 896
+       Sairam: 893
+       Dentro: 3
+   S1Norte
+       Entraram: 600
+       Sairam: 599
+       Dentro: 1
+   N2Sul
+       Entraram: 903
+       Sairam: 899
+       Dentro: 4
+   S2Norte
+       Entraram: 295
+       Sairam: 294
+       Dentro: 1
+   L1Oeste
+       Entraram: 1803
+       Sairam: 1795
+       Dentro: 8
+
+Pistas Sumidouro
+   O1Oeste
+       Sairam: 482
+       Entraram: 486
+       Dentro: 4
+   N1Norte
+       Sairam: 502
+       Entraram: 504
+       Dentro: 2
+   S1Sul
+       Sairam: 530
+       Entraram: 530
+       Dentro: 0
+   N2Norte
+       Sairam: 1592
+       Entraram: 1593
+       Dentro: 1
+   S2Sul
+       Sairam: 1602
+       Entraram: 1605
+       Dentro: 3
+   L1Leste
+       Sairam: 1535
+       Entraram: 1538
+       Dentro: 3
+
+Pistas Centrais
+   C1Oeste
+       Entraram: 866
+       Sairam: 864
+       Dentro: 2
+   C1Leste
+       Entraram: 2622
+       Sairam: 2614
+       Dentro: 8
+
+------------------------------
+Tempo de simulação: 18000s
+Frequancia do sinal: 12s
+
+Entraram no sistema: 6297
+Sairam do sistema: 6243
+Permanecem no sistema: 54
+Frequencia de saida: 20.81 Carros/min
 
