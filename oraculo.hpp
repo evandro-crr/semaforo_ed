@@ -50,6 +50,8 @@ public:
     Oraculo(unsigned int tempoFinal) :
         tempoFinal{tempoFinal} {}
 
+    Oraculo() {}
+
     /**
      * @brief      Adiciona evento na lista de evetos.
      *
@@ -65,8 +67,8 @@ public:
     void run() {
         while(true) {
             Evento eventoAtual = eventos.retiraDoInicio();
-            tempoAtual = eventoAtual.time;
             if (eventoAtual > tempoFinal) break;
+            tempoAtual = eventoAtual.time;
             unsigned int h = tempoAtual / 3600;
             unsigned int m = (tempoAtual / 60) % 60;
             unsigned int s = tempoAtual % 60;
