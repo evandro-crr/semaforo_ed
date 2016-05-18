@@ -3,15 +3,12 @@
 ## Execução
 ./semsim [Tempo total de simulação] [Frequencia de mudança dos sinais] [Tempo para captura de imagem] ... [Tempo para captura de imagem] <br />
 Obs.: Todos os tempos são dados em segundos.
-Exemplo.
-```
-./semsim 3600 60 60 3300 200 1800 2400
-```
+Exemplo: ```./semsim 3600 60 60 3300 200 1800 2400```
 
 ## Saidas
 ### Terminal
 No terminal sera mostrado todos os eventos na sua ordem de excuçao com com seu devido tempo e uma breve descrição.
-Exemplo.
+Exemplo:
 ```
 ...
 Tempo: 00:57:04 | Produz novo carro
@@ -47,11 +44,14 @@ Tempo: 00:57:18 | Produz novo carro
                 | Carro entrou na pista O1Leste
 ...
 ```
+Dica: Como a descrição mostrada no terminal pode ser muito grade é recomendo redirecionar a saida para um arquivo.
+Exemplo: ```./semsim 3600 60 60 3300 200 1800 2400 > saida.txt```
 #### dado.txt
 A simulação ira gerar um arquivo ```dado.txt``` com as imagens dos tempos definos nos argumentos da execução e no ultimo instante
 da simulação, além de dados gerais do sistema.
-Exemplo.
+Exemplo:
 ```
+...
 Imagem do sistema no tempo: 3300
 Pista Fonstes
    O1Leste
@@ -188,3 +188,5 @@ Sairam do sistema: 1175
 Permanecem no sistema: 83
 Frequencia de saida: 19.5833 Carros/min
 ```
+## Observação
+No codigo foi usado funções Lambda e function da biblioteca functional do C++ 11
